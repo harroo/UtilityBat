@@ -1,6 +1,6 @@
 
 using UnityEngine;
-using UntiyEngine.UI;
+using UnityEngine.UI;
 
 public class VersionTextSetUtility : MonoBehaviour {
 
