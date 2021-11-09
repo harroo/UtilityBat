@@ -7,6 +7,6 @@ public class TranslateUtility : MonoBehaviour {
 
 	private void Update () {
 
-		transform.position += movementSpeeds;
+		transform.position += movementSpeeds * Time.deltaTime;
 	}
 }

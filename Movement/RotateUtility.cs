@@ -7,6 +7,6 @@ public class RotateUtility : MonoBehaviour {
 
 	private void Update () {
 
-		transform.eulerAngles += rotationSpeeds;
+		transform.eulerAngles += rotationSpeeds * Time.deltaTime;
 	}
 }
