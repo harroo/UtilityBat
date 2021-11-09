@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class FullscreenTogglerUtility : MonoBehaviour {
 
-    private Resolution highestResolution, currentResolution;
+    public int defaultWidth = 860, defaultHeight = 480;
+
+    private Resolution highestResolution;
 
     private void Start () {
 
@@ -22,16 +24,13 @@ public class FullscreenTogglerUtility : MonoBehaviour {
 
         if (!Input.GetKeyDown(KeyCode.F11)) return;
 
-        Screen.fullScreen = !Screen.fullScreen;
-
         if (Screen.fullScreen) {
 
-            currentResolution = Screen.currentResolution;
-            Screen.SetResolution(highestResolution.width, highestResolution.height, true);
+            Screen.SetResolution(defaultWidth, defaultHeight, false);
 
         } else {
 
-            Screen.SetResolution(currentResolution.width, currentResolution.height, false);
+            Screen.SetResolution(highestResolution.width, highestResolution.height, FullScreenMode.ExclusiveFullScreen);
         }
     }
 }
