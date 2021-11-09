@@ -27,11 +27,11 @@ public class FullscreenTogglerUtility : MonoBehaviour {
         if (Screen.fullScreen) {
 
             currentResolution = Screen.currentResolution;
-            SetResolution(highestResolution.width, highestResolution.height, true);
+            Screen.SetResolution(highestResolution.width, highestResolution.height, true);
 
         } else {
 
-            SetResolution(currentResolution.width, currentResolution.height, false);
+            Screen.SetResolution(currentResolution.width, currentResolution.height, false);
         }
     }
 }

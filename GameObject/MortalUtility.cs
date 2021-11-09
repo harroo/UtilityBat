@@ -19,12 +19,12 @@ public class MortalUtility : MonoBehaviour {
 
 		if (damageTaken) {
 
-			hitPoint--;
+			hitPoints--;
 
 			if (hitPoints <= 0) {
 
 				if (objectToSpawnOnDestroy != null)
-					Instiantiate(objectToSpawnOnDestroy, transform.position, transform.rotation);
+					Instantiate(objectToSpawnOnDestroy, transform.position, transform.rotation);
 
 				Destroy(gameObject);
 			}

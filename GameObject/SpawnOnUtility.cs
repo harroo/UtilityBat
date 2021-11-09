@@ -7,9 +7,9 @@ public class SpawnWithUtility : MonoBehaviour {
 
     private void Start () {
 
-        if (objectToCreateOnSpawn == null) return;
+        if (objectToCreateOnStart == null) return;
 
-        Instantiate(objectToCreateOnSpawn, transform.position, transform.rotation);
+        Instantiate(objectToCreateOnStart, transform.position, transform.rotation);
     }
 
     private void OnCollisionEnter () {
