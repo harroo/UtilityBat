@@ -7,6 +7,6 @@ public class RotateUtility : MonoBehaviour {
 
 	private void Update () {
 
-		transform.position += rotationSpeeds;
+		transform.eulerAngles += rotationSpeeds;
 	}
 }
